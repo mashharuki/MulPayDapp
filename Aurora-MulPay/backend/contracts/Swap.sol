@@ -12,13 +12,13 @@ contract SwapContract {
     
     address public deployerAddress;
     
-    constructor() payable{
-        deployerAddress = msg.sender;
-    }
-
-    modifier onlyOwner(address deployerAddress) {
+    modifier onlyOwner() {
         require(msg.sender == deployerAddress, "Anyone but depoyer can distribute token!");
         _;
+    }
+
+    constructor() payable{
+        deployerAddress = msg.sender;
     }
 
     function calculateValue(
