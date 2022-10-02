@@ -15,9 +15,20 @@ const config: HardhatUserConfig = {
   networks: {
     // aurora testnet
     testnet_aurora: {
-      url: "https://testnet.aurora.dev/",
-      accounts: [AURORA_PRIVATE_KEY!],
+      url: "https://testnet.aurora.dev",
+      accounts: [`0x${AURORA_PRIVATE_KEY}`],
+      chainId: 1313161555,
+      timeout: 9000000,
+      gas: 2000000
     },
+    develop_aurora: {
+      url: 'https://develop.rpc.testnet.aurora.dev:8545',
+      accounts: [`0x${AURORA_PRIVATE_KEY}`]
+    },
+    ropsten: {
+      url: 'https://rpc.testnet.aurora.dev:8545',
+      accounts: [`0x${AURORA_PRIVATE_KEY}`]
+    }
   },
 };
 
