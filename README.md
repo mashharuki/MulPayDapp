@@ -42,6 +42,24 @@ Creating Icons for Windows...
 ✓ Successfully generated launcher icons
 ```
 
+### flutterの開発環境チェックコマンド
+ `flutter doctor`  
+
+ 以下のような結果が出ればOK!
+ ```cmd
+Doctor summary (to see all details, run flutter doctor -v):
+[✓] Flutter (Channel stable, 3.0.2, on macOS 12.6 21G115 darwin-x64, locale ja-JP)
+Checking Android licenses is taking an unexpectedly long time...[✓] Android toolchain - develop for Android devices (Android SDK version 30.0.1)
+[✓] Xcode - develop for iOS and macOS (Xcode 14.0.1)
+[✓] Chrome - develop for the web
+[✓] Android Studio (version 4.0)
+[✓] VS Code (version 1.71.2)
+[✓] Connected device (2 available)
+[✓] HTTP Host Availability
+
+• No issues found!
+ ```
+
 ### 参考文献
 1. [Aurora](https://aurora.dev/faucet)
 2. [Infura](https://infura.io/)

@@ -1,8 +1,8 @@
 import 'package:fluid_bottom_nav_bar/fluid_bottom_nav_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:mulpay_frontend/view/screens/home.dart';
-import 'package:mulpay_frontend/view/screens/send.dart';
-import 'package:mulpay_frontend/view/screens/wallet.dart';
+import 'package:frontend/view/screens/home.dart';
+import 'package:frontend/view/screens/send.dart';
+import 'package:frontend/view/screens/wallet.dart';
 import 'package:provider/provider.dart';
 import 'package:hexcolor/hexcolor.dart';
 

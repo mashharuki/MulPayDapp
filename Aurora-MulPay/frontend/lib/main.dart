@@ -1,11 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:hexcolor/hexcolor.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:frontend/view/screens/home.dart';
+import 'package:frontend/view/screens/signin.dart';
+import 'package:fluid_bottom_nav_bar/fluid_bottom_nav_bar.dart';
+import 'package:frontend/model/contract_model.dart';
 
 /**
  * main function
  */
 Future main() async {
   await dotenv.load(fileName: ".env");
-  
+
   runApp(
     MultiProvider(
       providers: [
