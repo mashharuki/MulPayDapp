@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "npx hardhat test",
     "deploy:aurora": "npx hardhat run scripts/deploy.ts --network testnet_aurora && cp -r artifacts/contracts/ERC20Tokens.sol ../frontend/smartcontracts && cp -r artifacts/contracts/Swap.sol ../frontend/smartcontracts"
   },
   "keywords": [],

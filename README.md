@@ -1,32 +1,62 @@
 # MulPayDapp
-Auroraを利用した送金用のDapp開発リポジトリです。
+
+Aurora を利用した送金用の Dapp 開発リポジトリです。
 
 ### フロントエンド起動方法
- `cd frontend && flutter run`
+
+`cd frontend && flutter run`
 
 ### テスト実行
- `cd backend && npx hardhat test`
 
- ```cmd
- Swap Contract
-    Deployment
+`cd backend && npx hardhat test`
+
+```cmd
+Swap Contract
+   Deployment
 1000000000000000000000000
-      ✔ ERC20 token is minted from smart contract (4901ms)
+     ✔ ERC20 token is minted from smart contract (4901ms)
 value of ETH/DAI is 0.1
-      ✔ Get value between DAI and ETH
+     ✔ Get value between DAI and ETH
 Before transfer, address_1 has 0 ETH
 After transfer, address_1 has 0.1 ETH
-      ✔ swap function (87ms)
+     ✔ swap function (87ms)
 
 
-  3 passing (5s)
- ```
+ 3 passing (5s)
+```
+
+### Aurora testnet へのデプロイ記録
+
+```zsh
+npm run deploy:aurora
+```
+
+```zsh
+Downloading compiler 0.8.0
+Compiled 7 Solidity files successfully
+Deploying contracts with the account: 0x51908F598A5e0d8F1A3bAbFa6DF76F9704daD072
+(node:6032) ExperimentalWarning: stream/web is an experimental feature. This feature could change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+Account balance: 9997864624350000000
+deployer address is 0x51908F598A5e0d8F1A3bAbFa6DF76F9704daD072
+Swap Contract is deployed to: 0x9dbec436843B2f12BAf8A372CC210a0dA8c10281
+DaiToken is deployed to: 0x091F9906b37EE1C49a097589B6cfc258a97534F1
+EthToken is deployed to: 0x8D649Ae3C6DEf2b21db9867dB92fDA10Fc231a11
+AoaToken is deployed to: 0x32D34bc9dAD8c5172b7756357Cc43166a3A2FaFb
+ShibaToken is deployed to: 0x677fA3F54bab17C4654A534683F1CEab94278632
+SolToken is deployed to: 0x50f2f66Eb93E7B5864c192F197af76D4611Ae7b8
+UsdtToken is deployed to: 0x16A39C809bCC52080BB6Ab0828b995524fC3D77b
+UniToken is deployed to: 0xB03239d60afB36F245781Bf484D9FcD5bA61C402
+MaticToken is deployed to: 0x32F9d19A89b65F91da684ee25136CF692673A160
+```
 
 ### pub get とは
+
 `pubspec.yaml`ファイルに記述されているパッケージをダウンロードしてくれるコマンド  
 `flutter pub get`
 
 ### pub get check
+
 `flutter pub run flutter_launcher_icons:main`
 
 ```cmd
@@ -42,11 +72,13 @@ Creating Icons for Windows...
 ✓ Successfully generated launcher icons
 ```
 
-### flutterの開発環境チェックコマンド
- `flutter doctor`  
+### flutter の開発環境チェックコマンド
 
- 以下のような結果が出ればOK!
- ```cmd
+`flutter doctor`
+
+以下のような結果が出れば OK!
+
+```cmd
 Doctor summary (to see all details, run flutter doctor -v):
 [✓] Flutter (Channel stable, 3.0.2, on macOS 12.6 21G115 darwin-x64, locale ja-JP)
 Checking Android licenses is taking an unexpectedly long time...[✓] Android toolchain - develop for Android devices (Android SDK version 30.0.1)
@@ -58,9 +90,11 @@ Checking Android licenses is taking an unexpectedly long time...[✓] Android to
 [✓] HTTP Host Availability
 
 • No issues found!
- ```
+```
 
 ### 参考文献
+
 1. [Aurora](https://aurora.dev/faucet)
 2. [Infura](https://infura.io/)
 3. [Hardhat Aurora config](https://doc.aurora.dev/interact/hardhat/)
+4. [Aurora Scan](https://testnet.aurorascan.dev/)
