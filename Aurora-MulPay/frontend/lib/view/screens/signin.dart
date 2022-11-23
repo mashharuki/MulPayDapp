@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:hexcolor/hexcolor.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:http/http.dart';
 import 'package:frontend/model/contract_model.dart';
-import 'package:frontend/view/screens/home.dart';
 import 'package:frontend/view/widgets/navbar.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:hexcolor/hexcolor.dart';
+import 'package:http/http.dart';
 import 'package:provider/provider.dart';
 import 'package:web3_connect/web3_connect.dart';
 import 'package:web3dart/web3dart.dart';
@@ -18,22 +17,19 @@ import 'package:web_socket_channel/io.dart';
 class SignIn extends StatefulWidget {
   const SignIn({Key? key}) : super(key: key);
 
-   @override
+  @override
   State<SignIn> createState() => _HomeState();
 }
 
 class _HomeState extends State<SignIn> {
-  
   final connection = Web3Connect();
   final String _rpcUrl = "https://testnet.aurora.dev";
   // client
-  final _client = Web3Client(
-    "https://testnet.aurora.dev", 
-    Client(), 
-    socketConnector: () {
-      return IOWebSocketChannel.connect("wss://testnet.aurora.dev").cast<String>();
-    }
-  );
+  final _client =
+      Web3Client("https://testnet.aurora.dev", Client(), socketConnector: () {
+    return IOWebSocketChannel.connect("wss://testnet.aurora.dev")
+        .cast<String>();
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -47,7 +43,7 @@ class _HomeState extends State<SignIn> {
           child: Container(
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: const AssetImage("assets/multiple-coins.jpg"),
+                image: const AssetImage("assets/multiple-coins.png"),
                 alignment: const Alignment(-0.4, 0.5),
                 fit: BoxFit.fitHeight,
                 colorFilter: ColorFilter.mode(

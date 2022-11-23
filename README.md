@@ -2,7 +2,7 @@
 
 Aurora を利用した送金用の Dapp 開発リポジトリです。
 
-### フロントエンド起動方法
+### フロントエンド起動方法(事前にエミュレーターを起動させておくこと)
 
 `cd frontend && flutter run`
 
@@ -114,6 +114,16 @@ Checking Android licenses is taking an unexpectedly long time...[✓] Android to
 [✓] HTTP Host Availability
 
 • No issues found!
+```
+
+### エミュレーターまでのパス
+
+`cd /Users/xxx/Library/Android/sdk`  
+
+一覧確認コマンド
+
+```zsh
+./emulator -list-avds
 ```
 
 ### 参考文献
