@@ -26,63 +26,67 @@ Widget Coins(
             color: HexColor('#054C74'),
         ),
         child: Row(
-            children: [
-                SizedBox(
-                    height: 37,
-                    width: 37,
-                    child: Image.asset(imagePath),
-                ),
-                const SizedBox(width: 13,),
-                Column(
+          children: [
+            Row(
+                children: [
+                    SizedBox(
+                        height: 37,
+                        width: 37,
+                        child: Image.asset(imagePath),
+                    ),
+                    const SizedBox(width: 13,),
+                    Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                            Text(
+                                symbol,
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white,
+                                    fontSize: 14,
+                                ),
+                            ),
+                            Text(
+                                name,
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.grey,
+                                    fontSize: 12
+                                ),
+                            ),
+                        ],
+                    ),
+                ],
+            ),
+            Expanded(
+                child: SizedBox(),
+            ),
+            SizedBox(
+                width: displayWidth * 0.18,
+                child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                         Text(
-                            symbol,
+                            '${depo} ${symbol}',
                             style: TextStyle(
-                                fontWeight: FontWeight.bold,
                                 color: Colors.white,
-                                fontSize: 14,
+                                fontSize: 13,
                             ),
                         ),
                         Text(
-                            name,
+                            '${value} ETH',
                             style: TextStyle(
                                 fontWeight: FontWeight.bold,
-                                color: Colors.grey,
+                                color: Colors.white,
                                 fontSize: 12
                             ),
                         ),
                     ],
                 ),
-            ],
-        ),
-        Expanded(
-            child: SizedBox(),
-        ),
-        SizedBox(
-            width: displayWidth * 0.18,
-            child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                    Text(
-                        '${depo} ${symbol}',
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 13,
-                        ),
-                    ),
-                    Text(
-                        '${value} ETH',
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                            fontSize: 12
-                        ),
-                    ),
-                ],
             ),
-        ),
+          ]
+        )
     );
 }

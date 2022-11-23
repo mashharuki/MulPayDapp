@@ -17,6 +17,13 @@ import 'package:web_socket_channel/io.dart';
  */
 class SignIn extends StatefulWidget {
   const SignIn({Key? key}) : super(key: key);
+
+   @override
+  State<SignIn> createState() => _HomeState();
+}
+
+class _HomeState extends State<SignIn> {
+  
   final connection = Web3Connect();
   final String _rpcUrl = "https://testnet.aurora.dev";
   // client
