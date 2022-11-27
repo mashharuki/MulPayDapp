@@ -118,12 +118,18 @@ Checking Android licenses is taking an unexpectedly long time...[✓] Android to
 
 ### エミュレーターまでのパス
 
-`cd /Users/xxx/Library/Android/sdk`  
+`cd /Users/xxx/Library/Android/sdk/emulator`
 
 一覧確認コマンド
 
 ```zsh
 ./emulator -list-avds
+```
+
+DNS の設定を追加してエミュレーターを起動する場合
+
+```zsh
+./emulator -avd Pixel_4_API_28 -dns-server 8.8.8.8,8.8.4.4
 ```
 
 ### 参考文献
