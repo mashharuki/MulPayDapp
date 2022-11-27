@@ -2,6 +2,10 @@
 
 Aurora を利用した送金用の Dapp 開発リポジトリです。
 
+### 完成したアプリのイメージ画像
+
+<img src="./docs/mulpay.gif">
+
 ### フロントエンド起動方法(事前にエミュレーターを起動させておくこと)
 
 `cd frontend && flutter run`
